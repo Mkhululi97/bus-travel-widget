@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+/* 780000 */ /* C1121F */ /* FDF0D5 */ /* 003049 */ /* 669BBC */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #c1121f;
+  color: #f1ede3;
+}
+
+.displays-block {
+  display: block;
+}
+.full-width {
+  width: 100%;
+}
+
+.main-container {
+  max-width: 23.44rem;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 2rem;
+}
+.points-container,
+.number-of-trips-container,
+.price-per-trip-contianer,
+.return-trips-contianer {
+  margin-bottom: 20px;
+}
+p,
+label {
+  font-size: 1.6rem;
+}
+label {
+  margin-bottom: 3px;
+}
+input,
+select,
+button {
+  padding: 7px;
+}
+@media (min-width: 48rem) {
+  .main-container {
+    max-width: 76rem;
+    margin: 0 auto;
+  }
+}
