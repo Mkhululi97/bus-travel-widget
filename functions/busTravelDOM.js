@@ -1,7 +1,7 @@
 const inputPoints = document.querySelector(".points");
 const calcBtn = document.querySelector(".calculate-btn");
 const checkBox = document.querySelector(".return-trip-checkbox");
-const inputSingleTrips = document.querySelector("single-trips");
+const inputSingleTrips = document.querySelector(".single-trips");
 const inputPricePerTrip = document.querySelector(".price-per-trip");
 const inputReturnTrips = document.querySelector(".return-trip");
 const inputPricePerReturnTrip = document.querySelector(
@@ -18,7 +18,7 @@ function calcBtnFunction() {
     // take trip function
     busTripCalculator.takeTrip(selectLocation.value, selectedRadio.value);
     // get single trips
-    console.log(busTripCalculator.getSingleTrips());
+    inputSingleTrips.value = busTripCalculator.getSingleTrips();
   }
 }
 
