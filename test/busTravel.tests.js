@@ -60,20 +60,24 @@ describe("Test My BusTravel Factory Function", function () {
 
         assert.equal(1, busTripCalculator.getSingleTrips());
       });
+
+      // DEALS WITH THE PRICE TRIP
       it("should get the price per trip", function () {
         const busTripCalculator = BusTripCalculator();
-
-        assert.equal(40, busTripCalculator.getPricePerTrip());
+        busTripCalculator.takeTrip("Khayelitsha", "peak");
+        assert.equal(50, busTripCalculator.getPricePerTrip());
       });
       it("should get the number return trips", function () {
         const busTripCalculator = BusTripCalculator();
 
         assert.equal(2, busTripCalculator.getReturningTrips());
       });
+
+      // DEALS WITH THE PRICE TRIP
       it("should get the price per returning trip", function () {
         const busTripCalculator = BusTripCalculator();
-
-        assert.equal(80, busTripCalculator.getPriceReturningTrips());
+        busTripCalculator.takeTrip("Khayelitsha", "peak");
+        assert.equal(100, busTripCalculator.getPriceReturningTrips());
       });
     });
   });

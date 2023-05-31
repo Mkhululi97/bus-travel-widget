@@ -16,7 +16,6 @@ function BusTripCalculator() {
     Khayelitsha: 40,
     Dunoon: 25,
     MitchellsPlain: 30,
-    peakHourIncrease: 0.25,
   };
   function setPoints(inputPoints) {
     points.pointsEntered = inputPoints;
@@ -41,6 +40,13 @@ function BusTripCalculator() {
 
       numOfTrips.numReturnTrips =
         points.pointsEntered / (2 * tripInfo[inputLocation]);
+    }
+    if (peakOrOffPeak === "peak") {
+      /* Dealing with the price for the trips */
+      priceTrip.singleTrips =
+        tripInfo[inputLocation] + tripInfo[inputLocation] * 0.25;
+      priceTrip.returnTrips =
+        2 * (tripInfo[inputLocation] + tripInfo[inputLocation] * 0.25);
     }
   }
 
