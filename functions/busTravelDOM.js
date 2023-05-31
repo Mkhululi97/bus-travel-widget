@@ -18,7 +18,14 @@ function calcBtnFunction() {
     // take trip function
     busTripCalculator.takeTrip(selectLocation.value, selectedRadio.value);
     // get single trips
+
+    /* dealing with trips */
     inputSingleTrips.value = busTripCalculator.getSingleTrips();
+    inputReturnTrips.value = busTripCalculator.getReturningTrips();
+
+    /* dealing with price for trips */
+    inputPricePerTrip.value = busTripCalculator.getPricePerTrip();
+    inputPricePerReturnTrip.value = busTripCalculator.getPriceReturningTrips();
   }
 }
 
